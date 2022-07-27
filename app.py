@@ -55,7 +55,7 @@ def satisfaction:
     satisfaction_reaction = output 
     
 with col2: 
-    st.write(satisfaction_reaction)
+    st.write(satisfaction(satisfaction_level))
 
     
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
