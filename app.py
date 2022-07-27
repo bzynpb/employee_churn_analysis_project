@@ -52,7 +52,7 @@ def satisfaction:
         output ="🤗"
     elif satisfaction_level = 1:
         output ="🥰"
-    satisfaction_reaction = output 
+   return output 
     
 with col2: 
     st.write(satisfaction(satisfaction_level))
