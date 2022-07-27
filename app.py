@@ -5,7 +5,7 @@ import streamlit as st
 from sklearn.preprocessing import scale, StandardScaler
 # from PIL import Image
 
-st.markdown('<style>body{background-color: #DDD3C7;}</style>',unsafe_allow_html=True)
+st.markdown('<style>body{background-color:#DDD3C7;}</style>',unsafe_allow_html=True)
 
 
 df = pd.read_csv("HR_Dataset.csv")
