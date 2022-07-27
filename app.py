@@ -22,6 +22,7 @@ html_temp = """
 <div style="background-color:navy;padding:10px">
 <h2 style="color:white;text-align:center;">Churn Prediction ML app </h2>
 </div><br>"""
+
 st.markdown(html_temp,unsafe_allow_html=True)
 
 satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.30, step=0.01)
@@ -78,9 +79,10 @@ proba = model.predict(df2)
 st.write("")
 st.write("")
 st.write("")
+
 html_temp = """
-<div style="background-color:navy;padding:1.5px">
-<h1 style="color:white;text-align:center;">Please Predict Your Value </h1>
+<div style="background-color:navy;padding:10px">
+<h2 style="color:white;text-align:center;">Please Predict Your Value </h2>
 </div><br>"""
 
 if st.button("Predict Now!"):
