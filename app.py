@@ -24,7 +24,7 @@ html_temp = """
 
 st.markdown(html_temp,unsafe_allow_html=True)
 
-col1, col2 = st.columns(2) # ekrani 2 kolona ayirdik
+col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
 with col1:
     satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.50, step=0.01)
