@@ -5,6 +5,15 @@ import streamlit as st
 from sklearn.preprocessing import scale, StandardScaler
 # from PIL import Image
 
+[theme]
+primaryColor="#6eb52f"
+backgroundColor="#f0f0f5"
+secondaryBackgroundColor="#e0e0ef"
+textColor="#262730"
+font="sans serif"
+
+
+
 df = pd.read_csv("HR_Dataset.csv")
 features = pickle.load(open("features.pkl", "rb"))
 model = pickle.load(open("rf_tuned_model.pkl", "rb"))
