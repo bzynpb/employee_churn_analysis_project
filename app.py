@@ -14,7 +14,8 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.write(df.head())
 #st.table(df.head())
 #st.dataframe(df.head())
-st.image("work.png",width=800)
+# st.image("work.png",width=800)
+
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 # st.sidebar.title("Churn Probability of a single Customer")
