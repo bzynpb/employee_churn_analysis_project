@@ -36,7 +36,13 @@ time_spend_company=st.selectbox("The number of years spent by an employee in the
 #salary= st.selectbox("Salary level of the employee", ('low', 'medium', 'high'))
 #departments = st.selectbox("Employee's working department/division", ('IT', 'RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng', 'sales', 'support', 'technical'))
 
-
+st.write("")
+st.write("")
+st.write("")
+html_temp = """
+<div style="background-color:navy;padding:10px">
+<h2 style="color:white;text-align:center;">Please Predict Your Value </h2>
+</div><br>"""
 
 
 def single_customer():
@@ -75,15 +81,6 @@ def single_customer():
 
 df2 = single_customer()
 proba = model.predict(df2)
-
-st.write("")
-st.write("")
-st.write("")
-
-html_temp = """
-<div style="background-color:navy;padding:10px">
-<h2 style="color:white;text-align:center;">Please Predict Your Value </h2>
-</div><br>"""
 
 if st.button("Predict Now!"):
     if proba == 1:
