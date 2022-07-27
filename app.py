@@ -17,8 +17,8 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 
 # st.sidebar.title("Churn Probability of a single Customer")
 html_temp = """
-<div style="background-color:tomato;padding:1.5px">
-<h1 style="color:white;text-align:center;">Churn Prediction ML app </h1>
+<div style="background-color:blue;padding:10px">
+<h2 style="color:white;text-align:center;">Churn Prediction ML app </h2>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
@@ -27,6 +27,7 @@ last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0
 number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 4, step=1)
 average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
+
 #work_accident=st.selectbox("Whether an employee has had a work accident or not", ("Yes", 'No'))
 #promotion_last_5years=st.selectbox("Whether an employee has had a promotion in the last 5 years or not", ('Yes', 'No'))
 #salary= st.selectbox("Salary level of the employee", ('low', 'medium', 'high'))
@@ -72,7 +73,9 @@ def single_customer():
 df2 = single_customer()
 proba = model.predict(df2)
 
-if st.button("Submit"):
+st.subheader("Press predict if configuration is complete")
+
+if st.button("Predict Now!"):
     if proba == 1:
         st.error("Churn")
     else:
