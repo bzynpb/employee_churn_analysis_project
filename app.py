@@ -78,14 +78,10 @@ proba = model.predict(df2)
 st.write("")
 st.write("")
 st.write("")
-st.write("")
 html_temp = """
 <div style="background-color:navy;padding:1.5px">
 <h1 style="color:white;text-align:center;">Please Predict Your Value </h1>
 </div><br>"""
-
-
-st.subheader("Press predict if configuration is complete")
 
 if st.button("Predict Now!"):
     if proba == 1:
