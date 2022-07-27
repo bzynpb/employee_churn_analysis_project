@@ -13,14 +13,30 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.write(df.head())
 #st.table(df.head())
 #st.dataframe(df.head())
+body {
+    background-color: #eee;
+}
+
+.fullScreenFrame > div {
+    display: flex;
+    justify-content: center;
+}
+
 
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 # st.sidebar.title("Churn Probability of a single Customer")
 html_temp = """
-<div style="background-color:navy;padding:10px">
+<div style="background-color:smoke;padding:10px">
 <h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
 </div><br>"""
+
+
+with open("style.css") as f:
+    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+
+# path = "https://github.com/bzynpb/employee_churn_analysis_project/blob/main/work.png"
+image = Image.open("work.png")
 
 st.markdown(html_temp,unsafe_allow_html=True)
 
@@ -113,7 +129,7 @@ st.write("")
 st.write("")
 st.write("")
 html_temp = """
-<div style="background-color:navy;padding:10px">
+<div style="background-color:porpoise;padding:10px">
 <h2 style="color:white;text-align:center;">Please Predict Your Value</h2>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
