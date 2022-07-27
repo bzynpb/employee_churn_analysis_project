@@ -54,7 +54,7 @@ def satisfaction(satisfaction_level):
     else:
         output ="🥰"
         
-   return output 
+    return output 
     
 with col2: 
     st.write(satisfaction(satisfaction_level))
