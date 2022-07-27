@@ -28,6 +28,11 @@ html_temp = """
 <h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
+st.write('\n')
+
+
+
+
 
 st.image("work.png")
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
@@ -119,7 +124,7 @@ st.write("")
 st.write("")
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
-<h2 style="color:white;text-align:center;">Please Predict Your Value</h2>
+<h2 style="color:white;text-align:center;">Will Your Employee Run Away?</h2>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
@@ -129,9 +134,9 @@ c1, c2, c3, c4, c5,c6,c7,c8,c9 = st.columns(9)
 with c5:
     if c5.button("Predict Now!"):
         if proba == 1:
-            st.error("Churn")
+            st.error("Employee will LEAVE 👎")
         else:
-            st.success("Not Churn")
+            st.success("Employee will STAY 👍 ")
     
     #st.sidebar.success(f"The churn probability of selected customer is % {proba[:,1][0]*100:.2f}")
 hide_streamlit_style = """
