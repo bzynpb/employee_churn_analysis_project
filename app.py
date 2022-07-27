@@ -69,14 +69,6 @@ time_spend_company=st.selectbox("The number of years spent by an employee in the
 #salary= st.selectbox("Salary level of the employee", ('low', 'medium', 'high'))
 #departments = st.selectbox("Employee's working department/division", ('IT', 'RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng', 'sales', 'support', 'technical'))
 
-st.write("")
-st.write("")
-st.write("")
-html_temp = """
-<div style="background-color:navy;padding:10px">
-<h2 style="color:white;text-align:center;">Please Predict Your Value </h2>
-</div><br>"""
-
 
 def single_customer():
     my_dict = {"satisfaction_level" :satisfaction_level,
@@ -115,11 +107,25 @@ def single_customer():
 df2 = single_customer()
 proba = model.predict(df2)
 
-if st.button("Predict Now!"):
-    if proba == 1:
-        st.error("Churn")
-    else:
-        st.success("Not Churn")
+
+
+st.write("")
+st.write("")
+st.write("")
+html_temp = 
+"""
+<div style="background-color:navy;padding:10px">
+<h2 style="color:white;text-align:center;">Please Predict Your Value </h2>
+</div><br>
+"""
+st.markdown(html_temp,unsafe_allow_html=True)
+c1, c2, c3, c4, c5,c6,c7,c8,c9 = st.columns(9) 
+with c5:
+    if c5.button("Predict Now!"):
+        if proba == 1:
+            st.error("Churn")
+        else:
+            st.success("Not Churn")
     
     #st.sidebar.success(f"The churn probability of selected customer is % {proba[:,1][0]*100:.2f}")
 hide_streamlit_style = """
