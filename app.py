@@ -27,11 +27,12 @@ st.markdown(html_temp,unsafe_allow_html=True)
 col1, col2 = st.columns(2) # ekrani 2 kolona ayirdik
 
 with col1:
-    satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.30, step=0.02)
-    last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.30, step=0.02)
-    number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 4, step=1)
+    satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.90, step=0.01)
+    last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.50, step=0.01)
+    number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 5, step=1)
     average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
-    time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
+    
+time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
     
     
 
