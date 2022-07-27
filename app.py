@@ -130,9 +130,9 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 
-c1, c2, c3= st.columns((3,4,3)) 
-with c2:
-    if c2.button("Predict Now!"):
+c1, c2, c3,c4,c5= st.columns((1,3,4,3,1)) 
+with c3:
+    if c3.button("Predict Now!"):
         if proba == 1:
             st.error("Employee will LEAVE 👎")
         else:
