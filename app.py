@@ -13,15 +13,6 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.write(df.head())
 #st.table(df.head())
 #st.dataframe(df.head())
-body {
-    background-color: #eee;
-}
-
-.fullScreenFrame > div {
-    display: flex;
-    justify-content: center;
-}
-
 
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
@@ -35,8 +26,17 @@ html_temp = """
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
-# path = "https://github.com/bzynpb/employee_churn_analysis_project/blob/main/work.png"
-image = Image.open("work.png")
+col1, col2, col3 = st.beta_columns([1,6,1])
+
+with col1:
+    st.write("")
+
+with col2:
+    image = Image.open("work.png")
+
+with col3:
+    st.write("")
+
 
 st.markdown(html_temp,unsafe_allow_html=True)
 
