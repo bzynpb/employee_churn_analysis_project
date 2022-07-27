@@ -14,7 +14,7 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.table(df.head())
 #st.dataframe(df.head())
 
-st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻")
+st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 # st.sidebar.title("Churn Probability of a single Customer")
 html_temp = """
@@ -57,7 +57,7 @@ def satisfaction(satisfaction_level):
     return output 
     
 with col2: 
-    st.write(satisfaction(satisfaction_level))
+    st.title(satisfaction(satisfaction_level))
 
     
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
