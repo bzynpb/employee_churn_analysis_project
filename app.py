@@ -34,25 +34,25 @@ with col1:
 
 def satisfaction(satisfaction_level): 
     if satisfaction_level <= 0.01:
-        output = "🤬"
+        output = "  🤬"
         
     elif satisfaction_level <= 0.2:
-        output = "😒"
+        output = "  😒"
     
     elif satisfaction_level <= 0.4:
-        output = "😔"
+        output = "  😔"
     
     elif satisfaction_level <= 0.6:
-        output = "😑"
+        output = "  😑"
         
     elif satisfaction_level <= 0.8:
-        output = "😄"
+        output = "  😄"
         
     elif satisfaction_level < 1:
-        output = "🤗"
+        output = "  🤗"
         
     else:
-        output ="🥰"
+        output ="  🥰"
         
     return output 
     
