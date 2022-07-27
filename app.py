@@ -14,6 +14,7 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.table(df.head())
 #st.dataframe(df.head())
 
+st.set_page_config(page_title='Employee Churn Analysis Project', page_icon=':work:')
 
 # st.sidebar.title("Churn Probability of a single Customer")
 html_temp = """
@@ -82,6 +83,13 @@ if st.button("Predict Now!"):
         st.success("Not Churn")
     
     #st.sidebar.success(f"The churn probability of selected customer is % {proba[:,1][0]*100:.2f}")
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
 
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
