@@ -14,13 +14,13 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.write(df.head())
 #st.table(df.head())
 #st.dataframe(df.head())
-
+st.image("work.png",width=800)
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 # st.sidebar.title("Churn Probability of a single Customer")
 
 html_temp = """
-<div style="background-color:navy;padding:10px">
+<div style="background-color:#9EA8B0;padding:10px">
 <h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
@@ -114,10 +114,11 @@ st.write("")
 st.write("")
 st.write("")
 html_temp = """
-<div style="background-color:navy;padding:10px">
+<div style="background-color:#9EA8B0;padding:10px">
 <h2 style="color:white;text-align:center;">Please Predict Your Value</h2>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
+
 
 
 c1, c2, c3, c4, c5,c6,c7,c8,c9 = st.columns(9) 
