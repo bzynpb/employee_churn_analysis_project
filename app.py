@@ -17,25 +17,11 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 # st.sidebar.title("Churn Probability of a single Customer")
+
 html_temp = """
 <div style="background-color:smoke;padding:10px">
 <h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
 </div><br>"""
-
-
-# with open("style.css") as f:
-#     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-# col1, col2, col3 = st.beta_columns([1,6,1])
-
-# with col1:
-#     st.write("")
-
-# with col2:
-#     image = Image.open("work.png")
-
-# with col3:
-#     st.write("")
 
 
 st.markdown(html_temp,unsafe_allow_html=True)
