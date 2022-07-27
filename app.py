@@ -1,4 +1,5 @@
 import pickle
+from PIL import Image
 import pandas as pd
 import numpy as np
 import streamlit as st
