@@ -29,7 +29,7 @@ html_temp = """
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
-st.image("work.png",width=800)
+st.image("work.png")
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
 with col1:
