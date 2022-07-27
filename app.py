@@ -31,6 +31,32 @@ with col1:
     last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.50, step=0.01)
     number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 5, step=1)
     average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
+
+def satisfaction: 
+    if satisfaction_level <= 0.01:
+        output = "🤬"
+        
+    elif satisfaction_level <= 0.2:
+        output = "😒"
+    
+    elif satisfaction_level <= 0.4:
+        output ="😑"
+    
+    elif satisfaction_level <= 0.6:
+        output ="😀"
+        
+    elif satisfaction_level <= 0.8:
+        output ="😄"
+        
+    elif satisfaction_level < 1:
+        output ="🤗"
+    elif satisfaction_level = 1:
+        output ="🥰"
+    satisfaction_reaction = output 
+    
+with col2: 
+    st.write(satisfaction_reaction)
+
     
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
     
