@@ -22,9 +22,8 @@ html_temp = """
 <div style="background-color:smoke;padding:10px">
 <h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
 </div><br>"""
-
-
 st.markdown(html_temp,unsafe_allow_html=True)
+
 
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
@@ -119,6 +118,8 @@ html_temp = """
 <h2 style="color:white;text-align:center;">Please Predict Your Value</h2>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
+
+
 c1, c2, c3, c4, c5,c6,c7,c8,c9 = st.columns(9) 
 with c5:
     if c5.button("Predict Now!"):
