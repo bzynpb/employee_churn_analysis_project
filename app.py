@@ -130,7 +130,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 
-c1, c2, c3= st.columns((2,4,2)) 
+c1, c2, c3= st.columns((3,4,3)) 
 with c2:
     if c2.button("Predict Now!"):
         if proba == 1:
