@@ -14,13 +14,13 @@ model = pickle.load(open("rf_tuned_model.pkl", "rb"))
 #st.table(df.head())
 #st.dataframe(df.head())
 
-# favicon=st.image("https://github.com/bzynpb/employee_churn_analysis_project/blob/main/work.png")
-st.set_page_config(page_title='Employee Churn Analysis Project', page_icon=":work:")
+# favicon = st.image("https://github.com/bzynpb/employee_churn_analysis_project/blob/main/work.png")
+st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="💼")
 
 # st.sidebar.title("Churn Probability of a single Customer")
 html_temp = """
 <div style="background-color:navy;padding:10px">
-<h2 style="color:white;text-align:center;">Churn Prediction ML app </h2>
+<h2 style="color:white;text-align:center;">Employee Churn Analysis Project</h2>
 </div><br>"""
 
 st.markdown(html_temp,unsafe_allow_html=True)
