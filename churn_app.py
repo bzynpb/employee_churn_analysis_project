@@ -8,20 +8,12 @@ from sklearn.preprocessing import scale, StandardScaler
 
 
 df = pd.read_csv("HR_Dataset.csv")
-features = pickle.load(open("features.pkl", "rb"))
-model = pickle.load(open("rf_tuned_model.pkl", "rb"))
-#X = pickle.load(open("X", "rb"))
-#model2 = pickle.load(open("xgb_model", "rb"))
-
-#st.write(df.head())
-#st.table(df.head())
-#st.dataframe(df.head())
-
+features = pickle.load(open("features1.pkl", "rb"))
+model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
 
 
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
-# st.sidebar.title("Churn Probability of a single Customer")
 
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
@@ -91,28 +83,6 @@ def single_customer():
         "number_project": number_project,
         "average_montly_hours": average_montly_hours,
         "time_spend_company": time_spend_company}
-        #"work_accident": work_accident,
-        #"promotion_last_5years":promotion_last_5years,
-        #"salary": salary,
-        #"departments": departments}
-    
-    #for i in my_dict:
-     #   if i == "salary" and my_dict[i] == "low":
-      #      my_dict[i] = 0
-       # elif i == "salary" and my_dict[i] == "medium":
-        #    my_dict[i] = 1
-        #elif i == "salary" and my_dict[i] == "high":
-         #   my_dict[i] = 2
-        #elif i == "work_accident" and my_dict[i] == "Yes":
-            #my_dict[i] = 1
-        #elif i == "work_accident" and my_dict[i] == "No":
-            #my_dict[i] = 0
-        #elif i == "promotion_last_5years" and my_dict[i] == "Yes":
-            #my_dict[i] = 1
-        #elif i == "promotion_last_5years" and my_dict[i] == "No":
-            #my_dict[i] = 0
-        #else:
-            #continue}
    
     df_sample = pd.DataFrame.from_dict([my_dict])
     df_sample = pd.get_dummies(df_sample).reindex(columns=features, fill_value=0)
@@ -142,12 +112,11 @@ with c3:
         else:
             st.success("Employee will STAY 👍 ")
     
-    #st.sidebar.success(f"The churn probability of selected customer is % {proba[:,1][0]*100:.2f}")
+   
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
-
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
