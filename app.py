@@ -25,7 +25,7 @@ st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩
 
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
-<h1 style="color:white;text-align:center;">Employee Churn Analysis Project</h1>
+<h1 style="color:white;text-align:center;">Are you worried that your employees will leave your company?</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 st.write('\n')
@@ -35,6 +35,10 @@ st.write('\n')
 
 
 st.image("work.png")
+
+
+st.subheader('Complete the levels below and  ease your worries with Employee Churn Analysis')
+
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
 with col1:
