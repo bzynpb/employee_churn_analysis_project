@@ -92,10 +92,11 @@ columns = ['satisfaction_level',
           ]
 
 df_coll = pd.DataFrame.from_dict([coll_dict])
-user_inputs = pd.get_dummies(df_coll,drop_first=True).reindex(columns=columns, fill_value=0)
+user_inputs = pd.get_dummies(df_coll,drop_first=True).reindex(columns=features, fill_value=0)
 
-user_inputs_transformed = model.transform(user_inputs)
-proba = model.predict(user_inputs_transformed)
+# user_inputs_transformed = model.transform(user_inputs)
+# proba = model.predict(user_inputs_transformed)
+proba = model.predict(user_inputs)
 
 # st.dataframe(df_coll)
 
