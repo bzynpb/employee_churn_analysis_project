@@ -62,25 +62,10 @@ df = pd.read_csv("HR_Dataset.csv")
 features = pickle.load(open("features1.pkl", "rb"))
 model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
 
-# def single_customer():
-#     my_dict = {"satisfaction_level" :satisfaction_level,
-#         "last_evaluation":last_evaluation,
-#         "number_project": number_project,
-#         "average_montly_hours": average_montly_hours,
-#         "time_spend_company": time_spend_company}
-   
-#     df_sample = pd.DataFrame.from_dict([my_dict])
-#     df_sample = pd.get_dummies(df_sample).reindex(columns=features, fill_value=0)
-#     return df_sample
-
-# df2 = single_customer()
-# proba = model.predict(df2)
-
-
 coll_dict = {'satisfaction_level':satisfaction_level,
              'last_evaluation':last_evaluation,
              'number_project':number_project,
-             "average_montly_hours": average_montly_hours,
+             'average_montly_hours': average_montly_hours,
 	     'time_spend_company':time_spend_company
             }
 
@@ -114,7 +99,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 c1, c2, c3,c4,c5= st.columns((1,3,4,3,1)) 
 with c3:
     if c3.button("Predict Now!"):
-        if proba == 1:
+        if proba >0.5:
             st.error("Employee will LEAVE 👎")
         else:
             st.success("Employee will STAY 👍 ")
