@@ -5,15 +5,7 @@ import streamlit as st
 from sklearn.preprocessing import scale, StandardScaler
 # from PIL import Image
 
-
-
-df = pd.read_csv("HR_Dataset.csv")
-features = pickle.load(open("features1.pkl", "rb"))
-model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
-
-
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
-
 
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
@@ -21,9 +13,6 @@ html_temp = """
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 st.write('\n')
-
-
-
 
 
 st.image("work.png")
@@ -67,31 +56,48 @@ with col2:
     st.title(satisfaction(satisfaction_level))
 
     
-time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))
-    
-    
+time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))    
 
-#work_accident=st.selectbox("Whether an employee has had a work accident or not", ("Yes", 'No'))
-#promotion_last_5years=st.selectbox("Whether an employee has had a promotion in the last 5 years or not", ('Yes', 'No'))
-#salary= st.selectbox("Salary level of the employee", ('low', 'medium', 'high'))
-#departments = st.selectbox("Employee's working department/division", ('IT', 'RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng', 'sales', 'support', 'technical'))
+df = pd.read_csv("HR_Dataset.csv")
+features = pickle.load(open("features1.pkl", "rb"))
+model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
 
-
-def single_customer():
-    my_dict = {"satisfaction_level" :satisfaction_level,
-        "last_evaluation":last_evaluation,
-        "number_project": number_project,
-        "average_montly_hours": average_montly_hours,
-        "time_spend_company": time_spend_company}
+# def single_customer():
+#     my_dict = {"satisfaction_level" :satisfaction_level,
+#         "last_evaluation":last_evaluation,
+#         "number_project": number_project,
+#         "average_montly_hours": average_montly_hours,
+#         "time_spend_company": time_spend_company}
    
-    df_sample = pd.DataFrame.from_dict([my_dict])
-    df_sample = pd.get_dummies(df_sample).reindex(columns=features, fill_value=0)
-    return df_sample
+#     df_sample = pd.DataFrame.from_dict([my_dict])
+#     df_sample = pd.get_dummies(df_sample).reindex(columns=features, fill_value=0)
+#     return df_sample
+
+# df2 = single_customer()
+# proba = model.predict(df2)
 
 
-df2 = single_customer()
-proba = model.predict(df2)
+coll_dict = {'satisfaction_level':satisfaction_level,
+             'last_evaluation':last_evaluation,
+             'number_project':number_project,
+             'average_montly_hours':average_monthly_hours,
+			'time_spend_company':time_spend_company
+            }
 
+columns = ['satisfaction_level',
+           'last_evaluation', 
+           'number_project',
+           'average_montly_hours', 
+           'time_spend_company'
+          ]
+
+df_coll = pd.DataFrame.from_dict([coll_dict])
+user_inputs = pd.get_dummies(df_coll,drop_first=True).reindex(columns=columns, fill_value=0)
+
+user_inputs_transformed = model.transform(user_inputs)
+proba = model.predict(user_inputs_transformed)
+
+# st.dataframe(df_coll)
 
 st.write("")
 st.write("")
