@@ -80,8 +80,8 @@ model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
 coll_dict = {'satisfaction_level':satisfaction_level,
              'last_evaluation':last_evaluation,
              'number_project':number_project,
-             'average_montly_hours':average_monthly_hours,
-			'time_spend_company':time_spend_company
+             "average_montly_hours": average_montly_hours,
+	     'time_spend_company':time_spend_company
             }
 
 columns = ['satisfaction_level',
