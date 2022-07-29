@@ -95,11 +95,13 @@ button_style = """
 display: block;
 width: 100%;
 border: none;
-background-color: #3191C2;
+background-color: #8ca2ad;
 padding: 14px 28px;
-font-size: 20px;
+font-size: 24px;
 cursor: pointer;
-text-align: center; }
+text-align: center; 
+}
+
 .button span {
   cursor: pointer;
   display: inline-block;
