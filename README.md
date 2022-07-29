@@ -24,3 +24,4 @@
 - Built Random Forest Classifier and Evaluate Model Performance and Predict Test Data
 ## 6. Model Deployement¶
 - streamlit_app
+https://bzynpb-employee-churn-analysis-project-churn-app-q925kg.streamlitapp.com/
