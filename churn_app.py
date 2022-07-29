@@ -7,11 +7,6 @@ import streamlit as st
 
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
-
-
-
-
-
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
 <h1 style="color:white;text-align:center;">Are you worried that your employees will leave your company?</h1>
@@ -145,27 +140,20 @@ with c3:
         else:
             st.success("Employee will STAY 👍 ")    
 	
-wave_animation = """
-          <div style="waveWrapper waveAnimation">
-  <div style="waveWrapperInner bgTop">
-    <div style="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
-  </div>
-  <div style="waveWrapperInner bgMiddle">
-    <div style="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
-  </div>
-  <div style="waveWrapperInner bgBottom">
-    <div style="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
-  </div>
+wave_animation = """ <style>
+<div class="waveWrapper waveAnimation">
+	<div class="waveWrapperInner bgTop">
+		<div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  	</div>
+  	<div class="waveWrapperInner bgMiddle">
+    		<div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  	</div>
+  	<div class="waveWrapperInner bgBottom">
+    		<div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  	</div>
 </div>
 </style> """
 st.markdown(wave_animation, unsafe_allow_html=True) 
-
-# html_temp = """
-# <div style="background-color:#6F8EA6;padding:10px">
-# <h2 style="color:white;text-align:center;">Will Your Employee Run Away?</h2>
-# </div><br>"""
-# st.markdown(html_temp,unsafe_allow_html=True)
-
 
 
 hide_streamlit_style = """
