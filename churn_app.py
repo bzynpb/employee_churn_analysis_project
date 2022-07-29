@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import base64
+import cv2
 # from PIL import Image
 
 
@@ -46,8 +47,9 @@ st.markdown(html_temp2,unsafe_allow_html=True)
 
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
+
 with col1:
-    satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.50, step=0.01)
+    satisfaction_level=st.slider('<p style="font-family:Courier; color:Blue; font-size: 20px;">Employee satisfaction point</p>', 0.01, 1.00, 0.50, step=0.01)
     last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.50, step=0.01)
     number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 5, step=1)
     average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
@@ -70,8 +72,6 @@ col = f''' <style> div.stSlider > div[data-baseweb = "slider"] > div > div {{
 					rgb(1, 183, 158) {satisfaction_level}%, 
 					rgba(151, 166, 195, 0.25) {satisfaction_level}%, 
 					rgba(151, 166, 195, 0.25) 100%); }} </style>'''
-
-
 
 ColorSlider = st.markdown(col, unsafe_allow_html = True)   
 
