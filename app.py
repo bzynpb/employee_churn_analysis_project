@@ -5,28 +5,6 @@ import streamlit as st
 from sklearn.preprocessing import scale, StandardScaler
 # from PIL import Image
 
-def set_bg_hack_url():
-    '''
-    A function to unpack an image from url and set as bg.
-    Returns
-    -------
-    The background.
-    '''
-        
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background: url("https://images.pond5.com/animated-lines-gray-background-element-footage-055953080_iconl.jpeg");
-             background-size: auto,
-             background-size: 150px
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
-set_bg_hack_url()
-
 
 df = pd.read_csv("HR_Dataset.csv")
 features = pickle.load(open("features.pkl", "rb"))
