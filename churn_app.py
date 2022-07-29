@@ -78,7 +78,7 @@ columns = ['satisfaction_level',
 
 df_coll = pd.DataFrame.from_dict([coll_dict])
 user_inputs = pd.get_dummies(df_coll).reindex(columns=features.columns, fill_value=0)
-proba = model.predict(user_inputs)
+prediction = model.predict(user_inputs)
 
 st.write("")
 st.write("")
@@ -94,7 +94,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 c1, c2, c3,c4,c5= st.columns((1,3,4,3,1)) 
 with c3:
     if c3.button("Predict Now!"):
-        if proba[0] ==1:
+        if prediction[0] ==1:
             st.error("Employee will LEAVE 👎")
         else:
             st.success("Employee will STAY 👍 ")
