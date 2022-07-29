@@ -33,7 +33,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-set_background('background.jpeg')
+set_background('background.png')
 
 st.image("work.png")
 
