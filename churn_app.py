@@ -7,7 +7,12 @@ import streamlit as st
 
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
-st.markdown('<style>body{background-color: #ebeff1;}</style>',unsafe_allow_html=True)
+background_style = """
+           <style>
+	   body{background-color: #ebeff1;}
+	   </style>
+            """
+st.markdown(background_style, unsafe_allow_html=True) 
 
 html_temp = """
 <div style="background-color:#6F8EA6;padding:10px">
@@ -132,11 +137,6 @@ text-align: center;
 """
 st.markdown(button_style, unsafe_allow_html=True) 
 
-background_style = """
-            <style> body {background-color: lightblue;}
-            </style>
-            """
-st.markdown(background_style, unsafe_allow_html=True) 
 
 
 
