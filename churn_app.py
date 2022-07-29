@@ -59,7 +59,7 @@ ColorMinMax = st.markdown(''' <style> div.stSlider > div[data-baseweb = "slider"
 
 
 Slider_Cursor = st.markdown(''' <style> div.stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"]{
-	    background-color: rgb(0, 51, 102); box-shadow: rgb(14 38 74 / 20%) 0px 0px 0px 0.2rem;} </style>''', unsafe_allow_html = True)
+	    background-color: rgb(0, 51, 102); box-shadow: rgb(14 38 74 / 20%) 0px 0px 0px 0.3rem;} </style>''', unsafe_allow_html = True)
 
 
 Slider_Number = st.markdown(''' <style> div.stSlider > div[data-baseweb="slider"] > div > div > div > div
@@ -68,9 +68,9 @@ Slider_Number = st.markdown(''' <style> div.stSlider > div[data-baseweb="slider"
 
 col = f''' <style> div.stSlider > div[data-baseweb = "slider"] > div > div {{
 	    background: linear-gradient(to right, rgb(1, 183, 158) 0%, 
-					rgb(1, 183, 158) {satisfaction_level}%, 
-					rgba(151, 166, 195, 0.25) {satisfaction_level}%, 
-					rgba(151, 166, 195, 0.25) 100%); }} </style>'''
+					rgb(14, 38, 74) {satisfaction_level}%, 
+					rgba(14, 38, 74, 0.25) {satisfaction_level}%, 
+					rgba(14, 38, 74, 0.25) 100%); }} </style>'''
 
 
 ColorSlider = st.markdown(col, unsafe_allow_html = True)   
