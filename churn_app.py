@@ -46,15 +46,21 @@ st.markdown(html_temp2,unsafe_allow_html=True)
 
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
-original_title = '<p style="font-family:Courier; color:Green; font-size: 20px;">Employee satisfaction point</p>'
-# st.markdown(original_title, unsafe_allow_html=True)
+slider_text_style = """ 
+<style>
+span[data-baseweb="tag"] {
+  background-color: blue !important;
+}
+</style>
+"""
+
 
 with col1:
-    satisfaction_level=st.slider(original_title, 0.01, 1.00, 0.50, step=0.01, unsafe_allow_html=True)
+    satisfaction_level=st.slider("Employee satisfaction point", 0.01, 1.00, 0.50, step=0.01)
     last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.50, step=0.01)
     number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 5, step=1)
     average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
-	
+st.markdown(slider_text_style, unsafe_allow_html=True)	
 	
 ColorMinMax = st.markdown(''' <style> div.stSlider > div[data-baseweb = "slider"] > div[data-testid="stTickBar"] > div {
 	    background: rgb(1 1 1 / 0%); } </style>''', unsafe_allow_html = True)
