@@ -50,7 +50,7 @@ original_title = '<p style="font-family:Courier; color:Green; font-size: 20px;">
 # st.markdown(original_title, unsafe_allow_html=True)
 
 with col1:
-    satisfaction_level=st.slider(original_title, 0.01, 1.00, 0.50, step=0.01,, unsafe_allow_html=True)
+    satisfaction_level=st.slider(original_title, 0.01, 1.00, 0.50, step=0.01, unsafe_allow_html=True)
     last_evaluation=st.slider("Evaluated performance by the employer", 0.01, 1.00, 0.50, step=0.01)
     number_project=st.slider("How many of projects assigned to an employee?", 2 ,7, 5, step=1)
     average_montly_hours=st.slider("How many hours in averega an employee worked in a month?", 96, 310, 200, step=1)
