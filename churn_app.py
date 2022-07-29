@@ -91,7 +91,15 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 button_style = """ 
-<style> div.stButton > button:first-child { background-color: rgb(204, 49, 49); } </style>
+<style> div.stButton > button:first-child { 
+display: block;
+width: 100%;
+border: none;
+background-color: #3191C2;
+padding: 14px 28px;
+font-size: 16px;
+cursor: pointer;
+text-align: center; } </style>
 """
 st.markdown(button_style, unsafe_allow_html=True) 
 
