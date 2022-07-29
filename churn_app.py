@@ -59,8 +59,8 @@ with col2:
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))    
 
 df = pd.read_csv("HR_Dataset.csv")
-features = pickle.load(open("features1.pkl", "rb"))
-model = pickle.load(open("my_scaler_xgb.pkl", "rb"))
+features = pickle.load(open("features2.pkl", "rb"))
+model = pickle.load(open("XGBClassifier.pkl", "rb"))
 
 coll_dict = {'satisfaction_level':satisfaction_level,
              'last_evaluation':last_evaluation,
@@ -77,13 +77,7 @@ columns = ['satisfaction_level',
           ]
 
 df_coll = pd.DataFrame.from_dict([coll_dict])
-user_inputs = pd.get_dummies(df_coll,drop_first=True).reindex(columns=features, fill_value=0)
-
-# user_inputs_transformed = model.transform(user_inputs)
-# proba = model.predict(user_inputs_transformed)
-proba = model.predict(user_inputs)
-
-# st.dataframe(df_coll)
+proba = model.predict(df_coll)
 
 st.write("")
 st.write("")
