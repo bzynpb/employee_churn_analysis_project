@@ -115,7 +115,8 @@ button_style = """
 display: block;
 width: 100%;
 border: none;
-background-color: #8ca2ad;
+background-color: 3A5874;
+color: white;
 padding: 14px 28px;
 font-size: 24px;
 cursor: pointer;
