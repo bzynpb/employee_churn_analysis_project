@@ -90,6 +90,12 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 
 
+st.markdown(""" div.stButton > button:first-child {
+background-color: #00cc00;color:white;font-size:20px;height:3em;width:50%;border-radius:10px 10px 10px 10px;
+}
+“”"
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 
 c1, c2, c3,c4,c5= st.columns((1,3,4,3,1)) 
 with c3:
