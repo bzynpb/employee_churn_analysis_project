@@ -63,7 +63,7 @@ def satisfaction(satisfaction_level):
         output = "  😔"
     
     elif satisfaction_level <= 0.6:
-        output = "  😑"
+        output = "  🙂"
         
     elif satisfaction_level <= 0.8:
         output = "  😄"
