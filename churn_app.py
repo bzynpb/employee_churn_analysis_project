@@ -15,19 +15,25 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 st.write('\n')
 
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
 def set_background(png_file):
     bin_str = get_base64(png_file)
     page_bg_img = '''
     <style>
     .stApp {
-    background-image: url("https://img.freepik.com/free-vector/simple-gradient-background-vector-winter-blue-pink_53876-105768.jpg");
+    background-image: url("data:image/png;base64,%s");
     background-size: cover;
     }
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
+
+set_background('background.jpeg')
 
 st.image("work.png")
 
