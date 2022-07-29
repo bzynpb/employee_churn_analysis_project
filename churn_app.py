@@ -97,9 +97,33 @@ width: 100%;
 border: none;
 background-color: #3191C2;
 padding: 14px 28px;
-font-size: 16px;
+font-size: 20px;
 cursor: pointer;
-text-align: center; } </style>
+text-align: center; }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+</style>
 """
 st.markdown(button_style, unsafe_allow_html=True) 
 
