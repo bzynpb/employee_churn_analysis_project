@@ -133,15 +133,13 @@ st.markdown(button_style, unsafe_allow_html=True)
 
 
 
-
 c1, c2, c3,c4,c5= st.columns((1,3,4,3,1)) 
 with c3:
     if c3.button("Predict Now!"):
         if prediction[0] ==1:
             st.error("Employee will LEAVE 👎")
         else:
-            st.success("Employee will STAY 👍 ")
-    
+            st.success("Employee will STAY 👍 ")    
    
 hide_streamlit_style = """
             <style>
