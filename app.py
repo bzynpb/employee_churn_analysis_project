@@ -17,7 +17,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("background.jpg");
+             background: url("https://images.pond5.com/animated-lines-gray-background-element-footage-055953080_iconl.jpeg");
              background-size: auto,
              background-size: 150px
          }}
