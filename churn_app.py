@@ -9,7 +9,7 @@ import base64
 st.set_page_config(page_title='Employee Churn Analysis Project', page_icon="👩‍💻", layout="wide")
 
 html_temp = """
-<div style="background-color:#6F8EA6;padding:10px">
+<div style="background-color:#3A5874;padding:10px">
 <h1 style="color:white;text-align:center;">Are you worried that your employees will leave your company?</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
@@ -37,8 +37,12 @@ set_background('background.png')
 
 st.image("work.png")
 
+html_temp2 = """
+<div style="background-color:#5A7D9F;padding:10px">
+<h3 style="color:white;text-align:center;">Complete the levels below and  ease your worries with Employee Churn Analysis</h3>
+</div><br>"""
+st.markdown(html_temp2,unsafe_allow_html=True)
 
-st.subheader('Complete the levels below and  ease your worries with Employee Churn Analysis')
 
 col1, col2 = st.columns((7,1)) # ekrani 2 kolona ayirdik
 
