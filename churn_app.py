@@ -123,6 +123,7 @@ text-align: center; }
 .button:hover span:after {
   opacity: 1;
   right: 0;
+  }
 </style>
 """
 st.markdown(button_style, unsafe_allow_html=True) 
