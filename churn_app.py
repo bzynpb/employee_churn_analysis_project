@@ -77,7 +77,11 @@ columns = ['satisfaction_level',
           ]
 
 df_coll = pd.DataFrame.from_dict([coll_dict])
-proba = model.predict(df_coll)
+
+user_inputs = pd.get_dummies(df_coll).reindex(columns=columns, fill_value=0)
+user_inputs
+
+proba = model.predict(user_inputs)
 
 st.write("")
 st.write("")
