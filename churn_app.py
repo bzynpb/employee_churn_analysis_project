@@ -2,6 +2,7 @@ import pickle
 import pandas as pd
 import numpy as np
 import streamlit as st
+import base64
 # from PIL import Image
 
 
@@ -13,6 +14,19 @@ html_temp = """
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 st.write('\n')
+
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("https://img.freepik.com/free-vector/simple-gradient-background-vector-winter-blue-pink_53876-105768.jpg");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 st.image("work.png")
