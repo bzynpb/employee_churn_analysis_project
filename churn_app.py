@@ -107,7 +107,7 @@ with col2:
     
 time_spend_company=st.selectbox("The number of years spent by an employee in the company", (2, 3, 4, 5, 6, 7, 8, 9, 10))    
 
-df = pd.read_csv("HR_Dataset.csv")
+# df = pd.read_csv("HR_Dataset.csv")
 features = pickle.load(open("features2.pkl", "rb"))
 model = pickle.load(open("XGBClassifier.pkl", "rb"))
 
